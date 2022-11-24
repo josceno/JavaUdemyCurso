@@ -1,4 +1,6 @@
-public class Program{
+package Javabase;
+
+class Program{
     public static void main(String[] args){
         System.out.println("hello world");
     }
