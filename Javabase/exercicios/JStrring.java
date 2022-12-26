@@ -1,4 +1,4 @@
-package Javabase.exercicios;
+/*package Javabase.exercicios;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +17,7 @@ public class JStrring {
         System.out.println(soma);
     }
     /**
-     * 
-     */
+
     public void strManipulation(){
         String str =  "abcde FGHIJ 2222 aaaaa dddd";
         int vogal =0;
@@ -59,4 +58,5 @@ public class JStrring {
         repeticao.strManipulation();
     }
 }
+ */
 

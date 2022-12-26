@@ -1,6 +1,9 @@
 package Javabase.Poo.Aula63.application;
 
+import Javabase.Poo.Aula63.Models.Triangle;
 import java.util.Scanner;
+
+
 
 public class Main {
    
@@ -11,7 +14,7 @@ public class Main {
             area = Math.sqrt(p*(p-a)*(p-b)*(p-c));
             return area;
     } 
-    public static void main(String[] args){
+    public static void areaProgram(){
         double a;
         double b;
         double c;
@@ -32,6 +35,21 @@ public class Main {
         }
         System.out.printf("Triangle X area: %.4f\nTriangle y area: %.4f\n",x,y);
         if(x>y){System.out.println("Larger area: X");}else{System.out.println("Larger area: Y");}
+    }
+    public static void main(String[] args){
+       // areaProgram();
+       Triangle triangleX = new Triangle();
+       Triangle triangleY = new Triangle();
+       
+       System.out.println("Enter triagle X mesures");
+       triangleX.Setartriangulo();
+       System.out.println(areaTriangulo(triangleX.A(), triangleX.B(), triangleX.C()));
+       
+       System.out.println("Enter triagle Y mesures");
+       triangleX.Setartriangulo();
+       System.out.println(areaTriangulo(triangleY.A(), triangleY.B(), triangleY.C()));
+        
+        
     }
     
 }
