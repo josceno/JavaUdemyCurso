@@ -8,8 +8,6 @@ public class Triangle {
    private double b = 0;
    private double c = 0;
    
-   Scanner input = new Scanner(System.in);
-
    public double A(){
     return a;
    }
@@ -20,8 +18,19 @@ public class Triangle {
     return c;
    }
    public void Setartriangulo(){
+    Scanner input = new Scanner(System.in);
+
     a = input.nextDouble();
     b = input.nextDouble();
     c = input.nextDouble();
+
+    
    }
+   public double calcularArea(){
+      double area;
+      double p =  (a + b + c)/2;
+
+      area = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+      return area;
+} 
 }
