@@ -17,7 +17,7 @@ public class Employee {
     }
     
     public void icreaseSalary(double perctage){
-        grossSalary = grossSalary + (grossSalary - (grossSalary*perctage/100));
+        grossSalary = grossSalary + grossSalary*perctage/100;
 
         System.out.println("Updated data "+ name + "R$: " +netSalary() );
     }
