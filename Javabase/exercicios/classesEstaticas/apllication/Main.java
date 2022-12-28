@@ -7,6 +7,7 @@ import Javabase.exercicios.classesEstaticas.util.CurrencyConverter;
 
 public class Main {
     public static void main(String[] args) {
+        
         Scanner input = new Scanner(System.in);
         System.out.print("What is the dollar price:");
         double currency = input.nextDouble();
@@ -15,7 +16,7 @@ public class Main {
 
      
         System.out.printf("The anount to be paid in reais is: %.2f",CurrencyConverter.convertedValue(currency, bought));
-
+        input.close();
 
     }
     
