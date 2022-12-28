@@ -8,7 +8,8 @@ public class Produto {
     private double preco;
     private int quantidadeEstoque;
     
-   public Produto(String nome, double preço,int quantidadeEstoque){
+    public Produto(){}
+    public Produto(String nome, double preço,int quantidadeEstoque){
         this.nome = nome;
         this.preco = preço;
         this.quantidadeEstoque = quantidadeEstoque;
@@ -47,10 +48,10 @@ public class Produto {
     public String toString(){
         return nome
         + ", R$ "
-        + String.format("%.2f", nome)
-        +", "
+        + String.format("%.2f", preco)
+        +", quantidade: "
         + quantidadeEstoque
-        + " Valor tora R$"
+        + " Valor tora R$:"
         + String.format("%.2f",ValorEstoque());
     }
 }
