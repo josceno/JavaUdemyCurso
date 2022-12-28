@@ -1,6 +1,5 @@
 package Javabase.Poo.Aula66.application;
 
-import java.util.Scanner;
 
 import Javabase.Poo.Aula66.Controllers.ProdutoController;
 import Javabase.Poo.Aula66.Models.Produto;
@@ -12,4 +11,5 @@ public class Main {
         ProdutoController.gerenciadorDeestoque(produto);
         System.out.println(produto);
     }
+    
 }

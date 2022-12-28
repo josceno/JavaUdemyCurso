@@ -9,15 +9,34 @@ public class Produto {
     private int quantidadeEstoque;
     
     public Produto(){}
+    
     public Produto(String nome, double preço,int quantidadeEstoque){
         this.nome = nome;
         this.preco = preço;
         this.quantidadeEstoque = quantidadeEstoque;
     }
+    
     public Produto(String nome, double preco){
         this.nome = nome;
         this.preco = preco;
     }
+    
+    public String getNome(){
+        return nome;
+    }
+    
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    
+    public double getPreco(){
+        return preco;
+    }
+    
+    public void setPreco(double preco){
+        this.preco = preco;
+    }
+
 
     public void exibir(){
         System.out.println(nome);
