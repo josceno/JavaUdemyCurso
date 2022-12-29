@@ -52,7 +52,9 @@ public class Conta {
     }
 
     public String toString(){
-        return "Nome do titular:"+ nomeTitular+"\nNumero da conta: "+ numeroConta+"\nSaldo atual: "+ String.format("%.2f", saldoConta);
+        return "Nome do titular: "+ nomeTitular
+        +"\nNumero da conta: "+ numeroConta
+        +"\nSaldo atual: "+ String.format("%.2f", saldoConta);
     }
 
     
