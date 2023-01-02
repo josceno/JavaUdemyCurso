@@ -52,7 +52,6 @@ public class DadosPessais {
                 }
             }
           
-           
         }
            
         System.out.printf("Maior altura %.2f\n",maior);
