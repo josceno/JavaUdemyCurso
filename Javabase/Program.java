@@ -113,8 +113,17 @@ class Program{
 
         System.out.println("o maior é " +maiornum.maiorNumero(a,b,c));
     }
+    public static void foeach(){
+        String[] string = new String[]{"Maria","Bob","Alex"};
+        for(String nome : string){
+            System.out.println(nome);
+        }
+
+    } 
     public static void main(String[] args){
         Program repeticao = new Program();
-        repeticao.maxseeker();
+        //repeticao.maxseeker();
+        foeach();
     }
+
 }
