@@ -2,11 +2,13 @@ package Javabase.exercicios.Listas;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Listas {
     public static void main(String[] args){
+        Locale.US.setDefault(Locale.US);
         Scanner input = new Scanner(System.in);
        
         List<Integer> id = new ArrayList<>();
@@ -15,34 +17,39 @@ public class Listas {
         
         
         System.out.print("How many employees will be registred: ");
-        int n = 1;//input.nextInt();
+        int n = input.nextInt();
 
         for (int i = 0; i < n; i++) {
+            System.out.println();
             System.out.println("Empolyee #1:");
             System.out.print("Id: ");
-            int iden = 1;//input.nextInt();
+            int iden = input.nextInt();
             System.out.print("Name: ");
-            String name = "Nome";//input.nextLine();
-            System.out.println("Salary: ");
-            double salary = 3000.00;//input.nextDouble();
+            input.nextLine();
+            String name = input.nextLine();
+            System.out.print("Salary: ");
+            double salary = input.nextDouble();
 
 
             id.add(iden);
             nome.add(name);
             salario.add(salary);
         }
-        System.out.print("person id: ");
-        int indePessoa = 1;//input.nextInt();
-        System.out.println("Enter percentege: ");
-        double pctg = 10.0;//input.nextDouble();
+       
+        System.out.println();
+        System.out.print("Enter the emplyee that will have salary incrase: ");
+        int indePessoa =  input.nextInt();
+        System.out.print("Enter the percentege: ");
+        double pctg =  input.nextDouble();
         int index =id.indexOf(indePessoa);
-        System.out.println(salario.get(index));
+        
+        
+        System.out.println();
         salario.set(index, salario.get(index)+salario.get(index)*(pctg/100));
-        System.out.println(salario.get(index));
+        for (int i =0; i<n;i++){
+            System.out.println(id.get(i)+", "+ nome.get(i)+", "+String.format("%.2f",salario.get(i)));
+        }
         
 
-        
-        
-        
     }
 }
