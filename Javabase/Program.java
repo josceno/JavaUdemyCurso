@@ -120,10 +120,25 @@ class Program{
         }
 
     } 
+    public static void matrix() {
+        int[][] matrix = new int[3][4];
+
+        System.out.println(matrix.length);
+        System.out.println(matrix[0].length);
+
+        for (int i = 0; i < matrix.length; i++) {
+            
+            for (int j = 0; j < matrix[0].length; j++) {
+                System.out.print(matrix[i][j]+ " ");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args){
         Program repeticao = new Program();
         //repeticao.maxseeker();
-        foeach();
+        //foeach();
+        matrix();
     }
 
 }
