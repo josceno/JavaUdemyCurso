@@ -138,7 +138,8 @@ class Program{
         Program repeticao = new Program();
         //repeticao.maxseeker();
         //foeach();
-        matrix();
+        //matrix();
+        System.out.println("commitando besteira");
     }
 
 }
