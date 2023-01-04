@@ -49,13 +49,23 @@ public class Matrix {
             }
         }
         int ocorrencia = 8;//input.nextInt();
-        verificarPosições(matrix, ocorrencia);
+        //verificarPosições(matrix, ocorrencia);
+
+        System.out.println();
+        for (int i = 0; i<matrix.length;i++){
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j]+" ");
+            }
+            System.out.println();
+        }
         input.close();
     }
     public static void verificarPosições(int[][] matrix, int ocorrencia){
+        System.out.println(matrix[1][3]);
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
                 System.out.println(i +""+ j);
+                
                  if (matrix[i][j]== ocorrencia){
                     System.out.println("Position: "+i+","+j);
                     if(j>0)  System.out.println("Left: "+matrix[i][(j-1)]);
