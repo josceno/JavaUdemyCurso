@@ -40,7 +40,7 @@ public class Datetest {
         System.out.println(d1.format(dDormat));
         System.out.println(d2);
         System.out.println(d3);
-        System.out.println(d4);
+        System.out.println(d4.format(dDormat3));
         System.out.println(d5);
         System.out.println(d6);
         System.out.println(dDormat3.format(d6));
