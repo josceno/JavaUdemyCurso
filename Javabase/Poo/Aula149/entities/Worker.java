@@ -2,13 +2,12 @@ package Javabase.Poo.Aula149.entities;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Scanner;
 
 import Javabase.Poo.Aula149.entities.enums.WorkerLevel;
 
 public class Worker {
+   
     private String name;
     private  WorkerLevel level;
     private double baseSalary;
@@ -75,7 +74,10 @@ public class Worker {
 
     @Override
     public String toString() {
-        return "Worker [name=" + name + ", level=" + level + ", baseSalary=" + baseSalary + ", department=" + department.getName()
+        return "Name: "+ name+
+        "\nDepatament: "+department+
+        "\nLevel: "+level+
+        "\nBase salary: "+ String.format("%.2f", baseSalary)  +"Worker [name=" + name + ", level=" + level + ", baseSalary=" + baseSalary + ", department=" + department.getName()
                 + income(2018, 8)+"]";
     }   
     
