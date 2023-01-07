@@ -16,6 +16,7 @@ public class Program {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         DateTimeFormatter dFormat =  DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter dFormat2 =  DateTimeFormatter.ofPattern("MM/yyyy");
         Locale.setDefault(Locale.US);
         
         System.out.print(" Enter department's name: ");
@@ -24,13 +25,13 @@ public class Program {
         System.out.print("Name: ");
         String  name = input.nextLine();
         System.out.print("Level: ");
-        WorkerLevel level  = WorkerLevel.MD_LEVEL;
+        String level  = input.nextLine();
         System.out.print("Base salary: ");
         
         double baseSalary = input.nextDouble();
         System.out.print("houw many contracts to this worker? ");
         int N = input.nextInt();
-        Worker alex = new Worker(name, baseSalary, level, department);
+        Worker alex = new Worker(name, baseSalary, WorkerLevel.valueOf(level), department);
        
         for (int i = 0; i < N; i++) {
             System.out.println("Enter contract #"+(i+1));
@@ -52,7 +53,7 @@ public class Program {
         
         System.out.println("Name: "+ alex.getName());
         System.out.println("Depatament: "+department.getName());
-        System.out.println("income for"+ date.format(dFormat)+ ": "+ String.format("%.2f",alex.income(date.getYear(),date.getMonthValue()) ) );
+        System.out.println("income for "+ date.format(dFormat2)+ ": "+ String.format("%.2f",alex.income(date.getYear(),date.getMonthValue()) ) );
 
         input.close();
     }
