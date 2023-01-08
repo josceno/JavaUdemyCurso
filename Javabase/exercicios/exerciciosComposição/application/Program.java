@@ -20,10 +20,10 @@ public class Program {
         Order order = new Order(LocalDateTime.now(), OrderStatus.Processing);
         
         Product product = new Product("Tv", 1000.00);
-        Product product1 = new Product("Fogão", 500.00);
+        Product product1 = new Product("Mouse", 40.00);
         
-        OrderItem orderItem = new OrderItem (2,product);
-        OrderItem orderItem2 = new OrderItem (1,product1);
+        OrderItem orderItem = new OrderItem (1,product);
+        OrderItem orderItem2 = new OrderItem (2,product1);
 
         order.setCliente(cliente);
         order.addItem(orderItem);
@@ -31,8 +31,8 @@ public class Program {
                
         System.out.println(order);
         System.out.println(cliente);
-        order.exibitItem();
-        System.out.println(order.total());
+        //order.exibitItem();
+       System.out.println(order.total(product));
 
     }
 }

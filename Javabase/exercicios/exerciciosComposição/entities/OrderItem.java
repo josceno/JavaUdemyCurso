@@ -1,7 +1,9 @@
 package Javabase.exercicios.exerciciosComposição.entities;
 
 public class OrderItem {
-    private int quantity;  
+    private int quantity; 
+    private Product product;
+    
     public int getQuantity() {
         return quantity;
     }
@@ -18,7 +20,7 @@ public class OrderItem {
         this.product = product;
     }
 
-    private Product product;
+    
     
     public OrderItem(int quantity,Product product) {
         this.quantity = quantity;
