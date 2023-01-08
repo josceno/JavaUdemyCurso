@@ -25,5 +25,11 @@ public class BusinessAccount extends Account {
             System.out.println("the amount to be loed is higher than the actual loan Limit");
         }
     }
-    
+    @Override
+    public void withdraw(double amount){
+        super.withdraw(amount);
+        balace -=2.0;
+
+    }
+
 }

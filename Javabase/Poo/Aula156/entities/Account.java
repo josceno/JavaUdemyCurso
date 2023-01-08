@@ -27,7 +27,7 @@ public class Account {
         return balace;
     }
     public void withdraw(double discount) {
-        this.balace-= discount;
+        this.balace-= discount+5.0;
     }
     public void deposit(double added){
         this.balace+=added;
