@@ -18,13 +18,21 @@ public class Program {
         LocalDateTime  dateTime2 = LocalDateTime.parse("08/08/2001 20:00:00",dFormatt);
         Cliente cliente = new Cliente("Alex Green","alex@gmail.com",dateTime2);
         Order order = new Order(LocalDateTime.now(), OrderStatus.Processing);
+        
         Product product = new Product("Tv", 1000.00);
-        OrderItem orderItem = new OrderItem (2);
+        Product product1 = new Product("Fogão", 500.00);
+        
+        OrderItem orderItem = new OrderItem (2,product);
+        OrderItem orderItem2 = new OrderItem (1,product1);
+
         order.setCliente(cliente);
         order.addItem(orderItem);
+        order.addItem(orderItem2);
                
         System.out.println(order);
-        System.out.println(orderItem.price(product));
-        
+        System.out.println(cliente);
+        order.exibitItem();
+        System.out.println(order.total());
+
     }
 }

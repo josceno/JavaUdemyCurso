@@ -36,7 +36,11 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente [name=" + name + ", email=" + email + ", birthDate=" + birthDate + "]";
+        StringBuilder sb = new StringBuilder();
+        sb.append("Cliente: ");
+        sb.append(name +" ("+ birthDate+") -"+email+"\n");
+
+        return sb.toString();
     }
     
     
