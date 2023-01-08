@@ -1,6 +1,6 @@
 package Javabase.Poo.Aula156.entities;
 
-public class SavingsAccount extends Account {
+public final class SavingsAccount extends Account {
     private double interestRate;
 
     public SavingsAccount(){
@@ -21,7 +21,7 @@ public class SavingsAccount extends Account {
     }
 
     @Override
-    public void withdraw(double amount){
+    public  final void withdraw(double amount){
         balace-=amount;
     }
     
