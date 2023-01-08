@@ -1,7 +1,7 @@
 package Javabase.exercicios.exerciciosComposição.entities.enums;
 
 public enum OrderStatus {
-    Processing,
-    Processed,
-    Delivered;
+    PROCESSING,
+    PROCESSED,
+    DELIVERED;
 }

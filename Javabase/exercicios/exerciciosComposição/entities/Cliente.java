@@ -38,7 +38,7 @@ public class Cliente {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Cliente: ");
-        sb.append(name +" ("+ birthDate+") -"+email+"\n");
+        sb.append(name +" ("+ birthDate+") -"+email);
 
         return sb.toString();
     }

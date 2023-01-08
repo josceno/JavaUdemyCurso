@@ -33,7 +33,7 @@ public class OrderItem {
 
     @Override
     public String toString() {
-        return "OrderItem [quantity" + quantity +" "+product.getName()+" "+product.getPrice()*quantity;
+        return product.getName()+String.format(" ,$%.2f",product.getPrice())+", Quantity: " + quantity +", "+"Subtotal: "+String.format("$%.2f",product.getPrice()*quantity);
     }
 
   
