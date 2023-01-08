@@ -54,11 +54,10 @@ public class Order {
             System.out.println(orderItem);  
         }
     }
-    public double total(Product product){
+    public double total(){
         double sum=0;
         for (OrderItem orderItem : orderLista) {
             System.out.println(orderItem); 
-            //sum += product.getPrice()*orderItem.getQuantity(); 
             sum+= orderItem.getProduct().getPrice() *orderItem.getQuantity();
         }
         return sum; 
