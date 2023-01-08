@@ -10,7 +10,8 @@ import Javabase.Poo.Aula156.util.ProgramTest;
 public class Program {
     public static void main(String[] args) {
        //ProgramTest.upCastingiDownCasting();
-       ProgramTest.testingOverrid();
+      // ProgramTest.testingOverrid();
+      ProgramTest.polimorfismoExemplo();
 
     }
 }

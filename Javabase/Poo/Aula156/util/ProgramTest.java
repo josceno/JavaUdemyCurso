@@ -49,4 +49,14 @@ public class ProgramTest {
         System.out.println(acc3.getBalace());
  
     }
+    public static void polimorfismoExemplo(){
+        Account x = new Account(1020,"Alex",1000.0);
+        Account y = new SavingsAccount(1023,"Maria",1000.0, 0.01);
+
+        x.withdraw(50.0);
+        y.withdraw(50.0);
+       
+        System.out.println(x.getBalace());
+        System.out.println(y.getBalace());
+    }
 }
