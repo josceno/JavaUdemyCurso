@@ -20,9 +20,9 @@ public class Program {
 
         System.out.println("Enter client data:");
         System.out.print("Name: ");
-        String name = /*"Alex Green"*/input.nextLine();
+        String name = input.nextLine();
         System.out.print("Email: ");
-        String email = /*"alex@gmail.com"/* */input.nextLine();
+        String email = input.nextLine();
         System.out.print("Birth date (DD/MM/YYYY): ");
         LocalDateTime  dateTime2 = LocalDateTime.parse(input.nextLine(),dFormatt);
         
@@ -49,16 +49,7 @@ public class Program {
             input.nextLine();
            
         }
-        
-        
-        //Product product1 = new Product("Mouse", 40.00);
-        
-        /*OrderItem orderItem = new OrderItem (1,product);
-        OrderItem orderItem2 = new OrderItem (2,product1);*/
-
         order.setCliente(cliente);
-       /* order.addItem(orderItem);
-        order.addItem(orderItem2);*/
                
         System.out.println(order);
         System.out.println(cliente);
