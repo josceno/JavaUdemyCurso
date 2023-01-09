@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
+import Javabase.exercicios.importedProducts.models.ImportedProducts;
 import Javabase.exercicios.importedProducts.models.Product;
 import Javabase.exercicios.importedProducts.models.UsedProducts;
 
@@ -29,12 +30,17 @@ public class Program {
             switch(type){
                 case "c":
                 //Product produto = new Product(name, price);
-                produtos.add(new Product(name, price));
-                break;
+                    produtos.add(new Product(name, price));
+                    break;
                 case "u":
                     System.out.print("Manfacture date (dd/MM/yyyy): ");
                     LocalDate date = LocalDate.parse("dd/MM/yyyy",dFormatter);
                     produtos.add(new UsedProducts(name, price, date));
+                    break;
+                case "i":
+                    System.out.print("Custom fee: ");
+                    double customfee = input.nextDouble();
+                    produtos.add(new ImportedProducts(name, price, customfee));
                     break;
             }
 
