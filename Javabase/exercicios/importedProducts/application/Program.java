@@ -19,11 +19,12 @@ public class Program {
         DateTimeFormatter dFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         System.out.print("Enter the number of products: ");
         int n = input.nextInt();
-        for (int i = 1; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             System.out.println("Product data #"+(i));
-            System.out.println("Commum, used or imported (c/u/i) ");
+            System.out.print("Commum, used or imported (c/u/i) ");
             String type = input.next();
             System.out.print("Name: ");
+            input.nextLine();
             String name = input.nextLine();
             System.out.print("price: ");
             double price = input.nextDouble();
@@ -34,7 +35,8 @@ public class Program {
                     break;
                 case "u":
                     System.out.print("Manfacture date (dd/MM/yyyy): ");
-                    LocalDate date = LocalDate.parse("dd/MM/yyyy",dFormatter);
+                    input.nextLine();
+                    LocalDate date = LocalDate.parse(input.nextLine(),dFormatter);
                     produtos.add(new UsedProducts(name, price, date));
                     break;
                 case "i":
@@ -44,6 +46,10 @@ public class Program {
                     break;
             }
 
+        }
+        System.out.println("PRICE TAGS: ");
+        for (Product product : produtos) {
+            System.out.println(product);
         }
     
     }
