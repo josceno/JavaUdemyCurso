@@ -1,5 +1,6 @@
 package Javabase;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Program{
@@ -134,12 +135,33 @@ class Program{
             System.out.println();
         }
     }
+
+    public static void trYcatch(){
+        Scanner input = new Scanner(System.in);
+        try{
+            String[] vect = input.nextLine().split(" ");
+            int position = input.nextInt();
+            System.out.println(vect[position]);
+        }catch(InputMismatchException e){
+            System.out.println(e);
+        }
+        catch(ArrayIndexOutOfBoundsException e){
+            System.out.println(e);
+            e.printStackTrace();
+            System.out.println("position invalid");
+        }
+        System.out.println("program End");
+        
+
+        input.close();
+    }
     public static void main(String[] args){
         Program repeticao = new Program();
         //repeticao.maxseeker();
         //foeach();
         //matrix();
-        System.out.println("commitando besteira");
+
+        trYcatch();
     }
 
 }
