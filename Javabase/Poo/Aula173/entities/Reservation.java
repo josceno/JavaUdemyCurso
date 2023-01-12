@@ -40,10 +40,23 @@ public class Reservation {
         long diff = checkout.getTime()-checkin.getTime();
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
-    public void updateCheckin(Date checkin, Date checkout){
+    private  void updateCheckin(Date checkin, Date checkout){
         this.checkin = checkin;
         this.checkout = checkout;
 
+    }
+    public String kindaBadSolution (Date chekin, Date checkout){
+        Date now = new Date(); 
+        if(checkout.before(now)|| checkin.before(now)){
+            return "Revertion date must be  after ";
+        }
+        
+        if(!checkout.before(now)){
+            return "Check-out date must be after check -in date";
+        }
+        this.checkin = chekin;
+        this.checkout = checkout;
+        return null;
     }
 
     @Override

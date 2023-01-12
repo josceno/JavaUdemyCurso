@@ -35,20 +35,63 @@ public class Solution {
             System.out.print("Check -in - (dd/MM/yyyy):  ");
             checkout = sp.parse("06/10/2029"/*input.next()*/);
 
-            reservation.updateCheckin(checkin, checkout);
+            //reservation.updateCheckin(checkin, checkout);
             System.out.println(reservation);
 
             Date now = new Date();
+
             if(checkin.before(now)|| checkout.before(now)){
                 System.out.println(" dates must be o future");
             }else if(!checkout.after(checkin)){
                 System.out.println("Enter a checkout date that is after the chekin date");
             }else {
-                reservation.updateCheckin(checkin, checkout);
+                //reservation.updateCheckin(checkin, checkout);
                 System.out.println(reservation);
             }
             
         }
+        public static void BadSolution(){
+            Scanner input = new Scanner(System.in);
+            SimpleDateFormat sp = new  SimpleDateFormat("dd/MM/yyyy");
+            System.out.print("Room number: ");
+            int roomNumber = 8021;/*input.nextInt();*/ 
+            System.out.print("Check -in - (dd/MM/yyyy):  ");
+            Date checkin = sp.parse("20/09/2029"/*input.next()*/);
+            System.out.print("Check -in - (dd/MM/yyyy):  ");
+            Date checkout = sp.parse("30/09/2029"/*input.next()*/);
+            
+          
+            if(!checkout.after(checkin)){
+                System.out.println("Enter a checkout date that is after the chekin date");
+            }else{
+                Reservation reservation = new Reservation(roomNumber, checkout, checkout);
+                System.out.println(reservation);
+                
+                System.out.println("Enter a date to update ");
+                System.out.print("Room number: ");
+                roomNumber = 8021;/*input.nextInt();*/ 
+                System.out.print("Check -in - (dd/MM/yyyy):  ");
+                checkin = sp.parse("05/10/2029"/*input.next()*/);
+                System.out.print("Check -in - (dd/MM/yyyy):  ");
+                checkout = sp.parse("06/10/2029"/*input.next()*/);
+    
+                //reservation.updateCheckin(checkin, checkout);
+                System.out.println(reservation);
+    
+                Date now = new Date();
+    
+                if(checkin.before(now)|| checkout.before(now)){
+                    System.out.println(" dates must be o future");
+                }else if(!checkout.after(checkin)){
+                    System.out.println("Enter a checkout date that is after the chekin date");
+                }else {
+                   // reservation.updateCheckin(checkin, checkout);
+                    System.out.println(reservation);
+                }
+                
+            }
 
     }
+    
+
 }
