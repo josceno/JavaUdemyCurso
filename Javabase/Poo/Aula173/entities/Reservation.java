@@ -1,6 +1,8 @@
 package Javabase.Poo.Aula173.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class Reservation {
     
@@ -10,6 +12,8 @@ public class Reservation {
 
     public Reservation(){}
     
+    public static SimpleDateFormat sp = new  SimpleDateFormat("dd/MM/yyyy");
+
     public Reservation(int roomNumber, Date checkin, Date checkout){
         this.roomNumber = roomNumber;
         this.checkin = checkin;
@@ -33,8 +37,8 @@ public class Reservation {
     }
 
     public long duration(){
-        long diff = checkin.getTime()-checkout.getTime();
-        return diff;
+        long diff = checkout.getTime()-checkin.getTime();
+        return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
     public void updateCheckin(Date checkin, Date checkout){
         this.checkin = checkin;
@@ -44,7 +48,7 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "Reservation [roomNumber=" + roomNumber + ", checkin=" + checkin + ", checkout=" + checkout + "]";
+        return "Reservation: Room: " + roomNumber + ", check in=" + sp.format(checkin) + ", check Out" + sp.format(checkout) + " "+duration()+" Nights";
     }
     
 }
