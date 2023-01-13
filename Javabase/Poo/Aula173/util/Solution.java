@@ -75,7 +75,7 @@ public class Solution {
                 System.out.print("Check -in - (dd/MM/yyyy):  ");
                 checkout = sp.parse("29/09/2023"/*input.next()*/);
     
-                String error =   reservation.kindaBadSolution(checkin, checkout);
+                String error =   reservation.updateCheckin(checkin, checkout);
                 if(error != null){
                     System.out.println("Error in reservation "+ error);
                     System.out.println(reservation);
