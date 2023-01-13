@@ -51,7 +51,7 @@ public class Reservation {
             return "Revertion date must be  after ";
         }
         
-        if(!checkout.before(now)){
+        if(!checkout.after(now)){
             return "Check-out date must be after check -in date";
         }
         this.checkin = chekin;
