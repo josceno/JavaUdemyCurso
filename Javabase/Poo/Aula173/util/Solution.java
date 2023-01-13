@@ -35,7 +35,7 @@ public class Solution {
             System.out.print("Check -in - (dd/MM/yyyy):  ");
             checkout = sp.parse("06/10/2029"/*input.next()*/);
 
-            //reservation.updateCheckin(checkin, checkout);
+            reservation.updateCheckin(checkin, checkout);
             System.out.println(reservation);
 
             Date now = new Date();
@@ -45,7 +45,7 @@ public class Solution {
             }else if(!checkout.after(checkin)){
                 System.out.println("Enter a checkout date that is after the chekin date");
             }else {
-                //reservation.updateCheckin(checkin, checkout);
+                reservation.updateCheckin(checkin, checkout);
                 System.out.println(reservation);
             }}
             
@@ -81,7 +81,7 @@ public class Solution {
                     System.out.println(reservation);
                 }
                 System.out.println(reservation);
-                String a ="a";
+                
             }
             input.close();
 
