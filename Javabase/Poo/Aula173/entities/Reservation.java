@@ -48,11 +48,11 @@ public class Reservation {
     public String kindaBadSolution (Date chekin, Date checkout){
         Date now = new Date(); 
         if(checkout.before(now)|| checkin.before(now)){
-            return "Revertion date must be  after ";
+            return "\nRevertion date must be  after ";
         }
         
         if(!checkout.after(now)){
-            return "Check-out date must be after check -in date";
+            return "\nCheck-out date must be after check -in date";
         }
         this.checkin = chekin;
         this.checkout = checkout;
@@ -61,7 +61,7 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "Reservation: Room: " + roomNumber + ", check in=" + sp.format(checkin) + ", check Out" + sp.format(checkout) + " "+duration()+" Nights";
+        return "\nReservation: Room: " + roomNumber + ", check in=" + sp.format(checkin) + ", check Out" + sp.format(checkout) + " "+duration()+" Nights";
     }
     
 }
