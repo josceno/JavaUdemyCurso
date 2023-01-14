@@ -1,4 +1,4 @@
-package Javabase.Poo.Aula173.entities.exeptions;
+package Javabase.Poo.Aula173.entities.exceptions;
 
 public class DomainException extends RuntimeException {
     private static final long serialVersion = 1L;

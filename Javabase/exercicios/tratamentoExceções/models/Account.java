@@ -1,14 +1,19 @@
 package Javabase.exercicios.tratamentoExceções.models;
 
+import Javabase.exercicios.tratamentoExceções.models.exeptions.WithdrawLimitError;
+import Javabase.exercicios.tratamentoExceções.models.exeptions.WithdrawValueException;
+
 public class Account {
     private int number;
     private String holder;
     private double balance;
     private double withdrawLimit; 
     
-    public Account(){
-    }
-    public Account(int number, String holder, double balance, double withdrawLimit){
+    public Account(){}
+    public Account(int number, String holder, double balance, double withdrawLimit) throws WithdrawLimitError{
+        if(withdrawLimit>balance){
+            throw new WithdrawLimitError("the seted Withdraw value is higher than the current balance value");
+        }
         this.number = number;
         this.holder = holder;
         this.balance = balance;
@@ -35,7 +40,10 @@ public class Account {
     public void deposit(double amount){
         this.balance+=amount;
     } 
-    public void withdraw(double amount){
+    public void withdraw(double amount) throws WithdrawValueException{
+        if (amount>withdrawLimit){
+            throw new WithdrawValueException("the amount of the withdraw is high than withdraw Limit");
+        }
         this.balance-=amount;
     }
 
