@@ -44,6 +44,9 @@ public class Account {
         if (amount>withdrawLimit){
             throw new WithdrawValueException("the amount of the withdraw is high than withdraw Limit");
         }
+        if (amount>balance && amount<withdrawLimit){
+            throw new WithdrawValueException("amount is higher than balance ");
+        }
         this.balance-=amount;
     }
 

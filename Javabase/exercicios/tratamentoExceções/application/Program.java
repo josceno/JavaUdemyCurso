@@ -13,7 +13,7 @@ public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner input = new Scanner(System.in);
-        for(int i = 0; i<2;i++){
+        for(int i = 0; i<4;i++){
             try{
                 System.out.println("Enter account data: ");
                 System.out.print("Number: ");
@@ -35,6 +35,8 @@ public class Program {
                 System.out.println("Error in Withdraw value: "+ e.getMessage()+"\n");
             }catch(WithdrawLimitError e){
                 System.out.println("Error in Withdraw limit: "+ e.getMessage()+"\n");
+            }catch(Exception e){
+                System.out.println("Unexpectd error: "+e.getMessage()+"\n");
             }
         }
         
