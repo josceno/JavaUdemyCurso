@@ -12,8 +12,11 @@ import Javabase.Poo.Aula173.util.Solution;
 
 public class Program {
     public static void main(String[] args) throws ParseException{
-        Solution.veryBadSolution();
+
+        //Solution.veryBadSolution();
         //Solution.BadSolution();
+        //Solution.veryBadSolution();
+        Solution.goodSolution();
 
     }
 }
