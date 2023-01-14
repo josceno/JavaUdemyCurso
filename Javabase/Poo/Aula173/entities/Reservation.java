@@ -45,18 +45,18 @@ public class Reservation {
         this.checkout = checkout;
 
     }*/
-    public String updateCheckin(Date chekin, Date checkout){
+    public void updateCheckin(Date chekin, Date checkout){
         Date now = new Date(); 
         if(checkout.before(now)|| checkin.before(now)){
-            return "\nRevertion date must be  after ";
+            throw new IllegalArgumentException( "\nRevertion date must be  after ");
         }
         
         if(!checkout.after(now)){
-            return "\nCheck-out date must be after check -in date";
+            throw new IllegalArgumentException( "\nCheck-out date must be after check -in date");
         }
         this.checkin = chekin;
         this.checkout = checkout;
-        return null;
+        
     }
 
     @Override

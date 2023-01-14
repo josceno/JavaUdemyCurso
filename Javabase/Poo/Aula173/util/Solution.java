@@ -50,9 +50,11 @@ public class Solution {
             }}
             
         }
-        public static void BadSolution() throws ParseException{
-            Scanner input = new Scanner(System.in);
-            SimpleDateFormat sp = new  SimpleDateFormat("dd/MM/yyyy");
+   
+    public static void goodSolution(){
+        Scanner input = new Scanner(System.in);
+        SimpleDateFormat sp = new  SimpleDateFormat("dd/MM/yyyy");
+        try{
             System.out.print("Room number: ");
             int roomNumber = 8021;/*input.nextInt();*/ 
             System.out.print("Check -in - (dd/MM/yyyy):  ");
@@ -60,31 +62,27 @@ public class Solution {
             System.out.print("Check -in - (dd/MM/yyyy):  ");
             Date checkout = sp.parse("26/09/2023"/*input.next()*/);
             
-          
-            if(!checkout.after(checkin)){
-                System.out.println("Enter a checkout date that is after the chekin date");
-            }else{
-                Reservation reservation = new Reservation(roomNumber, checkin, checkout);
-                System.out.println(reservation);
-                
-                System.out.println("Enter a date to update ");
-                System.out.print("Room number: ");
-                roomNumber = 8021;/*input.nextInt();*/ 
-                System.out.print("Check -in - (dd/MM/yyyy):  ");
-                checkin = sp.parse("24/09/2023"/*input.next()*/);
-                System.out.print("Check -in - (dd/MM/yyyy):  ");
-                checkout = sp.parse("29/09/2023"/*input.next()*/);
-    
-                String error =   reservation.updateCheckin(checkin, checkout);
-                if(error != null){
-                    System.out.println("Error in reservation "+ error);
-                    System.out.println(reservation);
-                }
-                System.out.println(reservation);
-                
-            }
-            input.close();
 
+            Reservation reservation = new Reservation(roomNumber, checkin, checkout);
+            System.out.println(reservation);
+            
+            System.out.println("Enter a date to update ");
+            System.out.print("Room number: ");
+            roomNumber = 8021;/*input.nextInt();*/ 
+            System.out.print("Check -in - (dd/MM/yyyy):  ");
+            checkin = sp.parse("24/09/2021"/*input.next()*/);
+            System.out.print("Check -in - (dd/MM/yyyy):  ");
+            checkout = sp.parse("29/09/2021"/*input.next()*/);
+
+            reservation.updateCheckin(checkin, checkout);    
+            System.out.println(reservation);
+        } catch(ParseException e){
+            System.out.println("invalid date format");
+        } catch(IllegalArgumentException e){
+            System.out.println(" Error in reservesion: "+ e.getMessage());
+        } 
+    
+        input.close();
     }
     
 
