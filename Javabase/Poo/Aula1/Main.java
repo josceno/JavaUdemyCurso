@@ -1,4 +1,4 @@
-package Javabase.Aula1;
+package Javabase.Poo.Aula1;
 
 import java.util.Locale;
 
