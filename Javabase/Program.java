@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Program{
-    Scanner input = new Scanner(System.in);
+    
     
     public void forUntil(){
         Scanner input = new Scanner(System.in);
@@ -106,6 +106,7 @@ class Program{
     }
 
     public void maxseeker(){
+        Scanner input = new Scanner(System.in);
         Program maiornum = new Program();
         System.out.println("isira 3 numeros");
         int a = input.nextInt();
@@ -155,13 +156,24 @@ class Program{
 
         input.close();
     }
+    
+
+    public static void strSplitter(){
+        Scanner input = new Scanner(System.in);
+        //String[] palavras = new String[3];
+        String palavra = input.nextLine();
+        String[] palavras = palavra.split(",");
+        for(String pavalra: palavras){
+            System.out.println(pavalra);
+        }
+    }
     public static void main(String[] args){
         Program repeticao = new Program();
         //repeticao.maxseeker();
         //foeach();
         //matrix();
-
-        trYcatch();
+        strSplitter();
+        //trYcatch();
     }
 
 }
