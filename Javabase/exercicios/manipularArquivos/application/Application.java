@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-import javax.sound.sampled.Line;
 
 import Javabase.exercicios.manipularArquivos.entities.Item;
 
@@ -43,7 +42,6 @@ public class Application {
                 "nome,Valor unitário,quantidade");
             }
 
-           
         }
         
         try(BufferedWriter bw = new BufferedWriter(new FileWriter(path+"\\out\\sumary.csv"))){
