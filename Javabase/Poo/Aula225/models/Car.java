@@ -59,7 +59,7 @@ public class Car {
         this.pricePerDay = pricePerDay;
     }
 
-    public int BasicPaymente(){
+    public Double BasicPaymente(){
     
         int[] duration= new int[5];
         duration[0] =pickup.getYear()-returndate.getYear();
@@ -67,6 +67,8 @@ public class Car {
         duration[2]= pickup.getDayOfMonth()-returndate.getDayOfMonth();
         duration[3]= pickup.getHour()-returndate.getHour();
         duration[4]= pickup.getMinute()-returndate.getMinute();
+
+
         int  hour = duration[3];
         if(duration[4]>0||duration[4]<0){ 
          if(hour<0){
@@ -76,7 +78,7 @@ public class Car {
              hour+=1;
         }
         }
-        return hour;
+        return hour * priceperHour;
             
         
        
