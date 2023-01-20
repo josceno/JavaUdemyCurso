@@ -172,8 +172,10 @@ class Program{
         //repeticao.maxseeker();
         //foeach();
         //matrix();
-        strSplitter();
+        //strSplitter();
         //trYcatch();
+        double d = 3.0;
+        System.out.println(d+=2);
     }
 
 }
