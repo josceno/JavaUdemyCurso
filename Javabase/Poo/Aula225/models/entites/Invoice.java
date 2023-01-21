@@ -3,9 +3,14 @@ package Javabase.Poo.Aula225.models.entites;
 public class Invoice {
     private double BasicPayment;
     private Double tax;
-    private Double totalpayment;
     
-    
+
+    public Invoice(){};
+
+    public Invoice(double BasicPayment, double tax) {
+        this.BasicPayment = BasicPayment;
+        this.tax = tax;
+    }
     public double getBasicPayment() {
         return BasicPayment;
     }
@@ -19,7 +24,7 @@ public class Invoice {
         this.tax = tax;
     }
     public Double getTotalpayment() {
-        return getTax()+getBasicPayment();
+        return Math.abs(getTax()+getBasicPayment());
     }
    
 

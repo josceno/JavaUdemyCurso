@@ -14,7 +14,7 @@ public class CarRental {
         this.start = start;
         this.finish = finish;
         this.vehicle = vehicle;
-        invoice = new Invoice();
+        
 
     }
     
@@ -42,40 +42,6 @@ public class CarRental {
     public void setInvoice(Invoice invoice) {
         this.invoice = invoice;
     }
-
-    public void BasicPaymente(double priceperHour, double pricePerDay){
-        
-        int[] duration= new int[5];
-        duration[0] =start.getYear()-finish.getYear();
-        duration[1] =start.getMonthValue()-finish.getMonthValue();
-        duration[2]= start.getDayOfMonth()-finish.getDayOfMonth();
-        duration[3]= start.getHour()-finish.getHour();
-        duration[4]= start.getMinute()-finish.getMinute();
-
-        int  value; 
-        if(Math.abs(duration[4])>0){ 
-           value = Math.abs(duration[3]);
-           value+=1;
-           invoice.setBasicPayment(value * priceperHour);
-         }
-         
-        if(Math.abs(duration[4])>=12){
-            value = duration[2];
-            invoice.setBasicPayment(value*pricePerDay);
-        }
-    }
-
-    public void calculateTax(){
-        
-        if(invoice.getBasicPayment()<100){
-            invoice.setTax(invoice.getBasicPayment()*0.2);
-        }
-        else{
-            invoice.setTax(invoice.getBasicPayment()*0.15);
-        }
-    }
-    
-    
     
 
 }
