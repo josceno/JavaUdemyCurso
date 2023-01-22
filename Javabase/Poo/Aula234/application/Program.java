@@ -16,8 +16,8 @@ public class Program {
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
         String employeeCsv = br.readLine();
         while (employeeCsv != null) {
-            String[] filds = employeeCsv.split("," );
-            list.add(new Employee(filds[0], Double.parseDouble(filds[1])));
+            String[] fields = employeeCsv.split("," );
+            list.add(new Employee(fields[0], Double.parseDouble(fields[1])));
             employeeCsv = br.readLine();
         }
         Collections.sort(list);
