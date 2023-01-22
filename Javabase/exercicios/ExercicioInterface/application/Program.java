@@ -24,11 +24,9 @@ public class Program {
         Double contractPaymentSrvice = input.nextDouble();
         System.out.print("insert installments: ");
         Integer months = input.nextInt();
-
         Contracts contracts = new Contracts(contractNumber, contractDate, contractPaymentSrvice, new Paypal());
     
         contracts.processPaymentes(months);
-        contracts.getInstallments();
         for(Installments installmentes: contracts.getInstallments()){
             System.out.println(installmentes);
         }
