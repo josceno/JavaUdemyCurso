@@ -1,6 +1,8 @@
 package Javabase;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 class Program{
@@ -167,6 +169,15 @@ class Program{
             System.out.println(pavalra);
         }
     }
+    
+    public static void printList(){
+        List<Integer> integers = new ArrayList<>();
+        integers.add(0);
+        integers.add(1);
+        integers.add(2);
+        System.out.println(integers.toString());
+
+    }
     public static void main(String[] args){
         Program repeticao = new Program();
         //repeticao.maxseeker();
@@ -174,8 +185,8 @@ class Program{
         //matrix();
         //strSplitter();
         //trYcatch();
-        double d = 3.0;
-        System.out.println(d+=2);
+        printList();
+        
     }
 
 }
