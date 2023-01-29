@@ -3,7 +3,9 @@ package Javabase;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 class Program{
     
@@ -178,7 +180,21 @@ class Program{
         System.out.println(integers.toString());
 
     }
-  
+    public static void  map(){
+        Map<String, String> cookies = new TreeMap<>();
+
+        cookies.put("username:", "Maria");
+        cookies.put("email: ", "maria@gmail.com");
+        cookies.put("phone:","99999999");
+
+        cookies.remove("phone:");
+        for (String key : cookies.keySet()) {
+            System.out.println("key"+ ":"+cookies.get(key));
+            
+        }
+
+
+    }
     public static void main(String[] args){
         Program repeticao = new Program();
         //repeticao.maxseeker();
@@ -186,7 +202,8 @@ class Program{
         //matrix();
         //strSplitter();
         //trYcatch();
-        printList();
+        //printList();
+        map();
         
     }
 
