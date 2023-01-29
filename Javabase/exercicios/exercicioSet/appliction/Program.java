@@ -2,6 +2,6 @@ package Javabase.exercicios.exercicioSet.appliction;
 
 public class Program {
     public static void main(String[] args) {
-        Ui.gerarMatricula();
+        System.out.println("Total Students: "+Ui.caltularTota(Ui.gerarMatricula()));
     }
 }
