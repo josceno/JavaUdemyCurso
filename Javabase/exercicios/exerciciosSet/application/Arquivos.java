@@ -1,16 +1,14 @@
 package Javabase.exercicios.exerciciosSet.application;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-import java.util.TreeSet;
+
 
 import Javabase.exercicios.exerciciosSet.entites.Log;
 
@@ -59,15 +57,5 @@ public class Arquivos {
             System.out.println(e.getMessage());
         }
     }
-    /*public static int comparadorNumero(Set<Log> log){
-        List<Log> logo  = new ArrayList<>();
-        int numeroTotal = 0;
-        for (Log log2 : log) {
-            if(!logo.contains(log2)){
-                logo.add(log2);
-                numeroTotal++;
-            } 
-        }
-        return numeroTotal;
-    }*/
+   
 }
