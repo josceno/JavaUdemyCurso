@@ -195,6 +195,11 @@ class Program{
 
 
     }
+    public static void lambdaTest(){
+        int x = 100;
+        int y = (x <10) ? 1+x :2-x;
+        System.out.println(y);
+    }
     public static void main(String[] args){
         Program repeticao = new Program();
         //repeticao.maxseeker();
@@ -203,7 +208,7 @@ class Program{
         //strSplitter();
         //trYcatch();
         //printList();
-        map();
+        lambdaTest();
         
     }
 
