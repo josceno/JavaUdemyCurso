@@ -6,12 +6,16 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import Javabase.Poo.Aula253.entities.Product;
 import Javabase.Poo.Aula253.Util.MyComparator;
 import Javabase.Poo.Aula253.Util.PriceUpdate;
 import Javabase.Poo.Aula253.Util.ProductPredicate;
+import Javabase.Poo.Aula253.Util.UppercaseName;
 
 public class Program {
     
@@ -44,8 +48,15 @@ public class Program {
        
         //list.removeIf(Product::nonStaticPredicateTest);
         
+        //Function<Product, String> function = p -> p.getName().toUpperCase();
+        
+        //List<String>  list2 = list.stream().map(function).collect(Collectors.toList());
+        //List<String> list2 = list.stream().map(Product::nonStaticApply).collect(Collectors.toList());
+        List<String> list2 = list.stream().map(p->p.getName().toUpperCase()).collect(Collectors.toList());
 
-        for (Product product : list) {
+        list2.forEach(System.out::println);
+
+        /*for (Product product : list) {
             System.out.println(product);
         }
 
@@ -54,14 +65,14 @@ public class Program {
                 p.setPrice(p.getPrice()*1.1);
             }
 
-        };*/
+        };*//* 
         Consumer<Product> con = (p -> p.setPrice(p.getPrice()*1.1));
         //list.forEach(p -> p.setPrice(p.getPrice()*1.1));
         list.forEach(Product::nonStaticUpdatePrice);
         System.out.println("---------------");
         for (Product product : list) {
             System.out.println(product);
-        }
+        }*/
 
         
     }
