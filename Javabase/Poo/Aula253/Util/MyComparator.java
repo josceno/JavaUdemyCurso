@@ -1,4 +1,4 @@
-package Javabase.Poo.Aula253.application;
+package Javabase.Poo.Aula253.Util;
 
 import java.util.Comparator;
 

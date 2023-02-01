@@ -5,11 +5,13 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import Javabase.Poo.Aula253.entities.Product;
+import Javabase.Poo.Aula253.Util.MyComparator;
+import Javabase.Poo.Aula253.Util.PriceUpdate;
 import Javabase.Poo.Aula253.Util.ProductPredicate;
-import Javabase.Poo.Aula253.application.MyComparator;
 
 public class Program {
     
@@ -40,10 +42,28 @@ public class Program {
         };*/
         Predicate<Product> pred = (p -> p.getPrice() >= 100);
        
-        list.removeIf(Product::nonStaticPredicateTest);
+        //list.removeIf(Product::nonStaticPredicateTest);
+        
+
         for (Product product : list) {
             System.out.println(product);
         }
+
+       /* Consumer con = new Consumer<Product>(){
+            public void accept(Product p){
+                p.setPrice(p.getPrice()*1.1);
+            }
+
+        };*/
+        Consumer<Product> con = (p -> p.setPrice(p.getPrice()*1.1));
+        //list.forEach(p -> p.setPrice(p.getPrice()*1.1));
+        list.forEach(Product::nonStaticUpdatePrice);
+        System.out.println("---------------");
+        for (Product product : list) {
+            System.out.println(product);
+        }
+
+        
     }
     
 }
