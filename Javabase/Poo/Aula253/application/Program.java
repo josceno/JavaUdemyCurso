@@ -15,7 +15,8 @@ import Javabase.Poo.Aula253.entities.Product;
 import Javabase.Poo.Aula253.Util.MyComparator;
 import Javabase.Poo.Aula253.Util.PriceUpdate;
 import Javabase.Poo.Aula253.Util.ProductPredicate;
-import Javabase.Poo.Aula253.Util.UppercaseName;
+import Javabase.Poo.Aula253.Util.ProductService;
+
 
 public class Program {
     
@@ -55,8 +56,9 @@ public class Program {
         List<String> list2 = list.stream().map(p->p.getName().toUpperCase()).collect(Collectors.toList());
 
         list2.forEach(System.out::println);
-
-        /*for (Product product : list) {
+        double sum =  new ProductService().sum(list, p -> p.getName().charAt(0)== 'T');
+        System.out.println(sum);
+        for (Product product : list) {
             System.out.println(product);
         }
 
