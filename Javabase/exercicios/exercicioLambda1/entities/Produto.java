@@ -6,7 +6,6 @@ public class Produto {
         
     private String nome;
     private double preco;
-    DecimalFormat df = new DecimalFormat("#.##");
 
     public Produto(){}
 
@@ -31,9 +30,7 @@ public class Produto {
         this.preco = preco;
     }
 
-    public DecimalFormat getDf() {
-        return df;
-    }
+    
 
     @Override
     public String toString() {
