@@ -1,7 +1,5 @@
 package Javabase.exercicios.exercicioLambda1.entities;
 
-import java.text.DecimalFormat;
-
 public class Produto {
         
     private String nome;

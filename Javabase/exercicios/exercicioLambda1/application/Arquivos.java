@@ -5,15 +5,18 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.nio.Buffer;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
+
+import javax.sound.sampled.Line;
 
 import Javabase.exercicios.exercicioLambda1.entities.Produto;
 
 public class Arquivos {
+
     public static String criarCaminhoArquivo(){
         List<Produto> produtos = Arrays.asList(new Produto("TV",900.50));
         
@@ -31,16 +34,24 @@ public class Arquivos {
         return path;
     }
     public static void lerAqrquivo(String path){
+        Locale.setDefault(Locale.US);
         List<Produto> produtos = new ArrayList<>();
         try(BufferedReader bf = new BufferedReader(new FileReader(path))) {
-            String[] lines = bf.readLine().split(",");
-            while(lines[0] != null){
-                produtos.add(new Produto(lines[0],Double.parseDouble(lines[1])));
+           String line = bf.readLine();
+            while(line != null){
+               
+               String[]  lines = line.split(",");
+               produtos.add(new Produto(lines[0],Double.parseDouble(lines[1])));
+               line = bf.readLine();
+              //  lines = bf.readLine().split(",");
             }
 
-            System.out.println(produtos.toString());
+           
         } catch (IOException e) {
-            // TODO: handle exception
+           
+       
+        }finally{
+            System.out.println(produtos.toString());
         }
 
     }
