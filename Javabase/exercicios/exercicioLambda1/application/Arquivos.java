@@ -52,16 +52,15 @@ public class Arquivos {
        
         }
         exibirListaProdutos(produtos);
+        System.out.println(mediapreço(produtos));
         return produtos;
     }
 
-    public static Double mediapreço(List<Produto> list )throws NullPointerException{
-      
-        List<Double> lista = list.stream().map(p -> p.getPreco()).collect(Collectors.toList());
-        
-        Double sum = lista.stream().reduce(0.0,(x,y)-> x+y);
+    public static Double mediapreço(List<Produto> list ){
 
-        return sum/lista.size();
+        Double avg = list.stream().map(p->p.getPreco()).reduce(0.0,(x,y)-> x+y)/list.size();
+
+        return avg;
     }
     public  static void exibirListaProdutos(List<Produto> list){
         list.sort((p1,p2)-> p1.getNome().compareTo(p2.getNome()));
