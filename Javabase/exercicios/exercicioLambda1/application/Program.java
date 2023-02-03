@@ -5,7 +5,8 @@ import java.util.Locale;
 public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
-        
-        Arquivos.lerAqrquivo(Arquivos.criarCaminhoArquivo());
+        String path = Arquivos.criarCaminhoArquivo();
+
+        System.out.println(Arquivos.mediapreço(Arquivos.lerAqrquivo(path)));
     }
 }
