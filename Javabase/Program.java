@@ -192,8 +192,6 @@ class Program{
             System.out.println("key"+ ":"+cookies.get(key));
             
         }
-
-
     }
     public static void lambdaTest(){
         int x = 100;
